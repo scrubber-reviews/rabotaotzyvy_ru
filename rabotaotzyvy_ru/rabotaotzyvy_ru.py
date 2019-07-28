@@ -5,22 +5,20 @@ from urllib.parse import urljoin
 
 import requests
 from bs4 import BeautifulSoup
-import locale
-locale.setlocale(locale.LC_TIME, 'ru_RU.UTF-8')
 
 _declination_months = {
-    'января': 'январь',
-    'февраля': 'февраль',
-    'марта': 'март',
-    'апреля': 'апрель',
-    'мая': 'май',
-    'июня': 'июнь',
-    'июля': 'июль',
-    'августа': 'августь',
-    'сентября': 'сентябрь',
-    'октября': 'октябрь',
-    'ноября': 'ноябрь',
-    'декабря': 'декабрь',
+    'января': 'January',
+    'февраля': 'February',
+    'марта': 'March',
+    'апреля': 'April',
+    'мая': 'May',
+    'июня': 'June',
+    'июля': 'July',
+    'августа': 'August',
+    'сентября': 'September',
+    'октября': 'October',
+    'ноября': 'November',
+    'декабря': 'December',
 }
 
 
