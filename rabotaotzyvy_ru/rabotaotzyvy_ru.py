@@ -53,6 +53,7 @@ class RabotaOtzyvyRu:
             self.logger.send_warning('Reviews not found')
         for review_soup in reviews_soup:
             new_review = Review()
+            new_review.id = int(review_soup['data-id'])
             new_review.text = review_soup.select_one(
                                                 'div.ticket-comment-text>p').text
             date_string = review_soup.select_one(
@@ -92,10 +93,14 @@ class Author:
 
 
 class Review:
+    id = None
     text = ''
     date = None
     author = None
     sub_reviews = []
+
+    def get_text(self):
+        return self.text
 
 
 if __name__ == '__main__':
